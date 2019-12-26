@@ -1,0 +1,41 @@
+lst = [1,2,3,4,5]
+#lst[0]=12
+for x in lst:
+    print(x)
+print(lst)
+if 10 in lst:
+    print("mahesh")
+else:
+    print("no")
+print(len(lst))
+lst[1]=123
+print(lst)
+lst.append(121343)
+print(lst)
+del lst[0]
+print(lst)
+lst.remove(123)
+print(lst)
+lst.pop()
+print(lst)
+lst.clear()
+print(lst)
+lst=[12,14,23]
+lstc=lst.copy()
+lstem=list(lst)
+print(lstem)
+print(lstc)
+emty=[]
+lstfunc=list()
+print(emty)
+print(lstfunc)
+
+
+print(lst+lst)
+lst.extend(lst)
+print(lst)
+print(lst.count(12))
+lst.reverse()
+print(lst)
+lst.sort(reverse=True)
+print(lst)

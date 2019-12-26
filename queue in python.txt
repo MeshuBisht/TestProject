@@ -1,0 +1,23 @@
+class queue:
+    def __init__(self):
+        self.ls =[]
+    def insert(self , data):
+        self.ls.insert(0,data)
+       
+    def prnt(self):
+        return self.ls
+    def remove(self):
+        if len(self.ls) !=0:
+            self.ls.pop()
+            
+        else:
+            return "queue is empty"
+qu= queue()
+qu.insert(1)
+qu.insert(2)
+qu.insert(3)
+qu.insert(4)
+print(qu.prnt())
+print(qu.remove())
+
+

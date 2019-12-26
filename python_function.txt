@@ -1,0 +1,325 @@
+com=1+9j
+#print(com)
+#print(com.imag)
+#print(com.real)
+flo= 2e1
+#print(flo)
+#print(int(243.23))
+#print(float(3223))
+#print(str(3422))
+
+strr='''mahesh
+bisht'''
+str1="""mahesh
+bihst"""
+test="mahesh,{} bisht"
+#print(test[-7:-1]) # exclude -7 postion element
+#print(test.format("sdsd"))
+print("{0:f},{2:d},{1:f} ,amheshbiff".format(43,4,3)) 
+print("{0:12},{1:3}mahesh".format(1,2)) # with spacing on left
+print("{0:^14} mahesh {1:<12} the best".format(1,'is'))  # center position
+print("{:>12} bisht".format("mahesh")) # right position
+print("{:#>12.2f},{:d} mahesh".format(123,124))
+#print(str1)
+#print(strr)
+#print('"mahesh \'s"')
+#print("'mahesh \"s'")
+#print('mahesh\'s')
+#print('"maheshs"bihst')
+#print("'mahesh'bisht")
+#print(r'mahesh\ns')
+#print(r'"mahesh \'s"')
+
+teste = "maheshe 1 bisht"
+#print(teste.split('1'))
+print(4%3)
+print(bool(2/2==0))
+a = 330
+b = 330
+print("A") if a > b else print("!=") if a!=b else print("=") if a == b else print("B")
+def my_function(*kids):
+  print("The youngest child is " + kids[2])
+
+my_function("Emil", "Tobias", "Linus")
+lis=[123,4,5,6]
+class Person:
+  def __init__(newwayobject, name, age):
+    newwayobject.name = name
+    newwayobject.age = age
+
+  def myfunc(abc):
+    print("Hello my name is " + abc.name)
+
+p1 = Person("John", 36)
+p1.myfunc()
+#del p1.name
+#del p1
+p1.myfunc()
+class test:
+    def __init__(self,t='mahesh'):
+        self.t=t
+    def private_member(self):
+        self.__d=10
+    def add(self):
+        return "base"
+class derive(test):
+    def __init__(self,a,b):
+        super().__init__(a) # test.__init__(self,a)
+        self.z=b
+    def printt(self):
+        return self._d
+    def add(self):
+        return "derived"
+der = derive('bisht',1)
+bass=test()
+der=bass
+print(bass.add())
+print(der.add())
+
+class test:
+    def __init__(self):
+        self.__b=8
+        self.__add()
+    def add(self):
+        print("base")
+    __add = add    
+class derive(test):
+    # def __init__(self,b):
+    #     #super().__init__(a) # test.__init__(self,a)
+    #     self.z=b
+    def add(self):
+        print("derived")
+der = derive()
+der.add()
+print(der._test__b)
+ 
+from functools import singledispatch
+@singledispatch
+def add(a, b):
+    raise NotImplementedError('Unsupported type')
+@add.register(int)
+def _(a, b):
+    print("First argument is of type ", type(a))
+    print(a + b)
+@add.register(str)
+def _(a, b):
+    print("First argument is of type ", type(a))
+    print(a + b)
+@add.register(list)
+def _(a, b):
+    print("First argument is of type ", type(a))
+    print(a + b)
+print(add(1,2))
+print(add("mahesh","bisht"))
+print(add([1,2],[1,2]))
+
+print(add.registry.keys())
+testt=[1,2,3]
+print(iter(testt))
+class MyNumbers:
+  def __init__(self):
+      self.a=1
+      print("init",self.a)
+  def __iter__(self):
+    self.a += 1
+    print("iter",self.a)
+    return self
+
+  def __next__(self):
+    if self.a <= 20:
+      x = self.a
+      self.a += 1
+      return x
+    else:
+      raise StopIteration
+
+myclass = MyNumbers()
+myiter = iter(myclass)
+
+for x in myiter: # for loop calla the iter() , then iter object is returened 
+  print(x)
+def test():
+    for i in "mahesh bisht":
+        yield i
+for it in test():
+    print(it)
+testttt= test()    
+print(next(testttt))    
+def simpleGeneratorFun(limit): 
+    a,b=0,1
+    for i in range(limit):
+        yield a
+        a , b =b ,a+b
+   
+# x is a generator object 
+for i in simpleGeneratorFun(5):
+    print(i);     
+itera = (i for i in "mahesh") # generator expression
+for k in itera:
+    print(k)
+amit=(x * 2 for x in range(10))    
+print(sum(amit))
+lss=["mahesh","bisht","ceddcsd","dssads"]
+for w in lss[:]:
+    if len(w) >6:
+        lss.insert(1,w)
+print(lss)
+
+def fibb(i):
+    return i
+print(fibb(1))
+f =fibb
+print(f(1))
+print(type(fibb))
+print(fibb)
+print(type(f))
+ran =range (1,10)
+print(list(ran))
+
+itt = iter(range(10))
+print(type(itt))
+for i in itt:
+    print(i)
+    next(itt)
+   def lss(a,b,**k):
+    print(a)
+    for z in k:
+        print(z)
+    
+ls={"a":"mahesh","b":"bisht"} 
+lss(**ls,z="dwde")
+ 
+
+  def fun(liss):
+    if liss%2==0:
+        return True
+    else:
+        return False
+    
+lis =[1,2,3,4,5,6,7,8,9,10]    
+filtered=filter(fun,lis) 
+for i in filtered:
+    print(i)
+lsitt = list(filter(fun,lis))
+print(lsitt)
+lss=list(filter((lambda x:x%2==0),lis))
+print(lss)
+ def test():
+    '''
+    mahesh ewfwef wefewf 
+    asdad
+    kdkasn dam damad
+    adadasd    damadas
+    asdas
+    damadasa
+    damadasaasd'''
+    pass
+print(test.__doc__) from collections import deque
+
+de= deque([1,2,3,4])
+
+de.popleft()
+de.append(6)
+print(de)
+
+
+from collections import deque
+que=deque()
+que.append(12)
+que.append(12)
+que.append(12)
+que.append(12)
+que.append(12)
+que.append(12)
+print(que.popleft())
+print(que)
+
+
+def fun(x): return x%2==0 or x%3==0 or x%7==0  #else: return x
+lis=[1,2,3,4,5,6,7]
+fill=list(filter(fun,lis))
+print(fill)
+
+
+def fun(x,y): return x*y  #else: return x
+lis=[1,2,3,4,5,6,7]
+fill=list(map(fun,lis,lis))
+print(fill)
+
+
+from functools import reduce
+lis=[1,2,3,4,4,5]
+liss=reduce(lambda x,y :x if x>y else y,lis)
+print(liss)
+
+
+liss=[1,2,3,4,5,6,7]
+
+lis = (i if i%2==0  else i for i in liss  )
+
+liss=[[1,2,3],[4,5,6],[7,8,9]]
+tran=[[row[i] for row in liss] for i in range(3)]
+print(list(tran))
+print(list(zip(*liss1)))  # do same as above
+
+## important #################
+tuu="mahesh",
+t = 12345,54321,'hello!'
+s=[1,2,3]
+print(type(tuu))
+print(type(t))
+x,y,z=s
+print(x,y,z)
+x,y,z=t
+print(x,y,z)
+##################
+
+sett=set('1231235') # will give every no as separate element in set and can be usedin list
+sett1=set('12344')
+print(sett-sett1)
+print(sett | sett1)
+print(sett & sett1)
+print(sett ^ sett1)
+
+lscom={x for x in 'mahesh'} # set comprehension
+
+
+
+
+for i ,j in enumerate([1,2,3]):
+    print(i,j)
+data=[1,2,3]
+data1=[9,4,1]
+for i , j in zip(data,data1):
+    print(i,j)
+diss=['mahesh','bisht','manish']
+print(sorted(diss))
+print(sorted(data1))
+
+class Bag:
+    def __init__(self):
+        self.data = []
+
+    def add(self, x):
+        self.data.append(x)
+
+    def addtwice(self, x):
+        self.add(x)
+        self.add(x)
+class der (Bag):
+    pass
+
+bad= Bag()
+print(bad.add(2))
+print(bad.addtwice(2))
+print(bad.data)
+
+print(isinstance(bad,Bag))
+print(issubclass(der,Bag))
+
+try:
+    raise Exception('mahesh','bisht')
+except Exception as inst:
+    print(inst.args)
+    print(inst.__str__())
+    

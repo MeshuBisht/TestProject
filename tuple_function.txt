@@ -1,0 +1,13 @@
+tup=[]
+#tup1=tupple()
+print(tup)
+tup1=[1.,2,3,3,4,5,7]
+print(tup1[2:5])  # include 2 and exclude 5
+print(tup1[-4:-2]) # include -4 and exclude -2
+
+lst=list(tup1)
+print(tup1)
+lst.append(1231)
+print(lst)
+tup=("mahesh",) # we have to " , "  if there is only one element
+print(tup)

@@ -1,0 +1,33 @@
+ditt= dict()
+print(ditt)
+ditt1=dict({1:"mahesh",2:"bisht"})
+print(ditt1)
+print(ditt1[1])
+print(ditt1.get(1))
+ditt1[1]="mahesh1"
+print(ditt1)
+for x in ditt1.values():
+    print(x)
+ditt1[3]="amit"
+print(ditt1)
+ditt1.pop(3)
+ditt1.popitem() # remove last inserteed element
+print(ditt1)
+ditt1[1]="mahehs"
+ditt1[4]="asnias"
+del ditt1[1]
+print(ditt1)
+#del ditt1
+ditt1.clear()
+print(ditt1)
+test=ditt1.copy()
+print(test)
+
+test={1:"mahes",
+      2:{3:"amit"}
+}
+
+print(test)
+
+test.update({3:{4:"sfsdfsdfdf"}})
+print(test)

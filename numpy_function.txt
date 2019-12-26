@@ -1,0 +1,120 @@
+import numpy as np 
+arr=np.arange(6,dtype=np.int16).reshape(2,3)
+arr1=np.arange(2,8,dtype=np.int16).reshape(2,3)
+
+#print(arr)
+#print(arr1)
+#print(np.add(arr,arr1))
+#print(np.exp(arr*1j))
+#print(np.sqrt(arr))
+#print(np.vectorize(arr))
+arr2=np.arange(2,14).reshape(4,3)
+#print(arr2)
+#print(arr2[1,1:3])  #slicing and dicing
+arr4=np.linspace(2,12,11,dtype=np.int16)
+#print(arr4)
+#arr4[:6:2]=1000 #from start to position 6 put 1000 to every 2 element after 0th
+# print(arr[ : :-1]) #reverse the array
+#print(arr2)
+#print(arr2[:,-1])
+#for a in arr2.flat:
+#    print(column)
+arr5=np.array(((-12.23,33.34),(-122.23,73.4),(312.234,9.33))) 
+#print(arr5)
+#print(np.floor(arr5)) # removes the no after the point
+arr6=np.linspace(2,7,6).reshape(2,3)
+#print(np.ravel(arr6)) # make vector of array
+arr7=np.linspace(2,10,9).reshape(3,3)
+arr8=np.linspace(3,5,3).reshape(-1,3)
+#print(arr7)
+#print(arr8)
+#print(np.vstack((arr7,arr8)))
+#print(np.hstack((arr7,arr7)))
+
+#print(np.column_stack((arr7,arr8))) # same as  hstack   for only matrixs  and for array 
+                                   # it first transpose the arrays then combine both arrays
+#print(np.row_stack((arr7,arr8))) # same as vstack for both arrays and matrixs
+#print(np.concatenate((arr7,arr8.T),axis=1))
+arr9=np.linspace(2,13,12).reshape(2,-1)
+#print(arr9)
+#print(np.hsplit(arr9,3)) #split into 3
+#print(np.hsplit(arr9,(2,5))) # split 2 column then 5 column
+arr10=np.arange(2,14,1).reshape(-1,2)
+#print(arr10)
+#print(np.vsplit(arr10,1))
+#print(np.split(arr10,2,axis=0))
+#print(np.split(arr10,2,axis=1))
+arr11=np.linspace(2,13,12).reshape(3,4)
+#print(arr11)
+test = arr11.view()
+test=test.reshape(2,6)
+test[0]=123
+print(arr11)
+test=arr11[:,2]
+print("maesh")
+print(test)
+test[0]=1
+print(arr11)
+#print(test)
+#print(arr11[...,1]) # same as arr11[:,1]
+testmahesh=arr11[:,3]
+#print(testmahesh)
+testmahesh[:]=10
+#print(testmahesh)
+arr12=testmahesh.copy()
+#print(arr12)
+arr12[0]=12
+#print(arr12)
+#print(arr11)
+arr13=arr11[...,1:3].copy()
+#print(arr13)
+#print(arr11[:])
+test123=np.arange(2,14,1).reshape(2,2,3)
+print(test123)
+print(test123[...,1])
+b=np.array([[0,1,1],[1,1,1]])
+c=[[0,1,1],[1,1,1]]
+#b[0]=21
+print(a)
+print(b)
+#print(a[b])
+#print(type(c))
+#print(type(b))
+k=np.arange(5)
+print(k)
+k[[0,0,1]]=k[[0,0,1]]+2
+print(k)
+z=10
+z=z+10
+print(z)
+temp=np.arange(1,7,1).reshape(2,3)
+print(temp)
+for t in temp:
+    t+=1
+    print(t," mahesh")
+print(temp) 
+a=np.linspace(2,7,6).reshape(2,3)*2
+b=np.array([[0,1,1],[1,1,1]])
+c=[[0,1,1],[1,1,1]]
+#b[0]=21
+#print(a)
+#print(b)
+#print(a[:,[[1,2],[1,0]]])
+
+#print(a[b])
+#print(type(c))
+#print(type(b))
+
+temp=np.arange(1,13,1).reshape(3,4)
+print(temp)
+#b1=np.array([True,False,True])
+#b2=np.array([False,True,True,True])
+b1=np.array([False,True,True])
+b2=np.array([False,True,False,True])
+print(b1.shape)
+print(b2.shape)
+print(temp[b1,:])
+print(temp[b1,:].shape)
+print(temp[:,b2])
+print(temp[:,b2].shape)
+print(temp[b1,b2])

@@ -1,0 +1,40 @@
+#code
+sett = ()
+sett123=set()
+print(sett)
+sett1=set(("mahesh","bisht"))
+print(sett1)
+for x in sett1:
+    print(x)
+sett1.add("mahesh1")
+print(sett1)
+sett1.update(("asd","asdas"))
+print(sett1)
+sett1.pop()
+print(sett1)
+#sett1.remove("mahesh") # raise eror if element is not exist
+print(sett1)
+sett1.discard("mahesh1") # raise no eror if element is not exist
+print(sett1)
+sett1.clear()
+print(sett1)
+tup=(1,2,3,4)
+
+del tup
+lst=[1,2]
+#lst.clear()
+#print(lst)
+del lst[1]
+#print(lst)
+sett1={1,2,3,4,5}
+sett2={9}
+print(sett1.union(sett2))
+sett1.update(sett2)
+print(sett1)
+sett123=sett1.copy()
+print(sett123)
+sett123.pop()
+sett123.pop() # remove the elements from the begninig
+print(sett123)
+froz = frozenset((1,2,3,4)) 
+print(froz)
